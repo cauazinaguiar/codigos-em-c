@@ -1,0 +1,27 @@
+#include <stdio.h> #include <stdlib.h>
+
+int main(void) {
+
+int a, b ,c;
+
+puts("bem vindo ao exercicio\n");
+puts("digite 3 numeros para saber qual o maior deles\n");
+
+puts("primeiro numero\n");
+scanf("%d",&a);
+
+puts("segundo numero\n");
+scanf("%d",&b);
+
+puts("terceiro numero\n");
+scanf("%d",&c);
+
+if(a>b && a>c){
+	printf("\no %d e o maior numero\n", a);
+}else if(b>c && b>a){
+	printf("\no %d e o maior numero\n", b);
+}else{
+	printf("\no %d e o maior numero\n", c);
+}
+return 0;
+}
