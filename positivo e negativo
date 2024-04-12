@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	
+	int num;
+	
+	puts("bem vindo ao exercicio\n");
+	puts("digite um numero para saber se ele e negativo, positivo ou neutro\n");
+	scanf("%d",&num);
+	
+	if(num>0){
+		puts("o numero e positivo\n");
+	}else if(num==0){
+		puts("o numero e neutro");
+	}else{
+		puts("o numero e negativo");
+	}
+	return 0;
+}
