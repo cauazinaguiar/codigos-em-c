@@ -1,0 +1,17 @@
+#include <stdio.h> #include <stdlib.h>
+
+int main(void) {
+
+int ano;
+
+puts("bem vindo ao exercicio\n");
+puts("digite um ano para saber se ele e bissexto ou nao\n");
+scanf("%d",&ano);
+
+if(ano%4==0){
+	puts("o ano e bissexto\n");
+}else{
+	puts("o ano nao e bissexto");
+}
+return 0;
+}
