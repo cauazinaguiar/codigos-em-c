@@ -1,0 +1,26 @@
+#include <stdio.h> #include <stdlib.h>
+
+int main(void) {
+
+int QAlunos=0,
+	 i=1;
+float SNotas=0,
+	  notas=0,	 
+	  media=0;
+puts("bem vindo ao exercicio\n");
+puts("digite a quantidade de alunos:");
+
+scanf("%d",&QAlunos);
+
+while(i<=QAlunos){
+printf("\ndigite a nota do aluno:\n", i);
+scanf("%f",&notas);
+i++;
+SNotas += notas;
+
+}
+media=SNotas/QAlunos;
+
+printf("\na media dos alunos e %.2f\n", media);
+return 0; 
+}
