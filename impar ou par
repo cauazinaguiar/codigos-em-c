@@ -1,0 +1,17 @@
+#include <stdio.h> #include <stdlib.h>
+
+int main(void) {
+
+int num;
+
+puts("bem vindo ao exercicio\n");
+puts("digite um numero para saber se ele e impar ou par\n");
+scanf("%d",&num);
+
+if(num%2==0){
+	puts("o numero e par\n");
+}else{
+	puts("o numero e impar");
+}
+return 0;
+}
