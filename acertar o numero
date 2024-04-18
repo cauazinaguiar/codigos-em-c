@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(void) {
+
+	int i, NumA = rand() % 10 + 1;
+	
+
+
+	do{
+		puts("digite um numero para advinhar\n");
+		scanf("%d", &i);
+	
+	}while(i!=NumA);
+		printf("voce acertou");
+}
