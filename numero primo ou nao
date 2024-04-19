@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+ 
+int main(void) {
+	
+	int num,i,resultado=0;
+	
+	puts("digite um numero para saber se ele e primo ou nao\n");
+	scanf("%d", &num);
+	
+	for(i=2;i<=num/2;i++){
+		if (num % i == 0) {
+       resultado++;
+       break;
+	}
+	}
+		if(resultado==0){
+		printf("\no numero %d e primo\n", num);
+	}else{
+		printf("\no numero %d nao e primo\n", num);
+	}
+	
+	return 0;
+}
+
+
