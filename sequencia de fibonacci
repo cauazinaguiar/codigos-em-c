@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+//sequencia de fibonacci é a soma do termo anterior do anterior com o termo anterior
+//1° 2° 3° 4° 5° 6° 7° 8° termo
+//0- 1- 1- 2- 3- 5- 8- 13
+//      A
+//   A1
+//A2
+
+int main(void) {
+		int i, termoant1,termoant2,termoatual,termoescolhido;
+		termoant1=1;
+		termoant2=0;
+		
+		puts("digite ate qual termo voce quer");
+		scanf("%d", &termoescolhido);
+			
+		printf("\no termo 1 e: %d\n",termoant2);
+		printf("o termo 2 e: %d",termoant1);	
+		
+		
+		for(i=3;i<=termoescolhido;i++){
+		
+		termoatual=termoant1+termoant2;
+		printf("\no termo %d e: %d",i, termoatual);
+		termoant2=termoant1;
+		termoant1=termoatual;
+		
+		
+	}
+	
+		
+	return 0;
+}    
