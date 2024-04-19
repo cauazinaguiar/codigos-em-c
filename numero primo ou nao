@@ -1,27 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>
- 
+
+
+//numero primo é divisivel por 1 e por ele mesmo(somente)
+//entao o numero de divisores de um numero primo é igual a 2
 int main(void) {
-	
-	int num,i,resultado=0;
-	
-	puts("digite um numero para saber se ele e primo ou nao\n");
-	scanf("%d", &num);
-	
-	for(i=2;i<=num/2;i++){
-		if (num % i == 0) {
-       resultado++;
-       break;
-	}
-	}
-		if(resultado==0){
-		printf("\no numero %d e primo\n", num);
-	}else{
-		printf("\no numero %d nao e primo\n", num);
-	}
+		int i, numPrimo, numDivisores=0;
+		
+		printf("\ndigite um numero\n");
+		scanf("%d",&numPrimo);
+			for( i=1; i<=numPrimo;i++){
+				if(numPrimo%i==0){
+					numDivisores++; //se o resto for 0, vai adicionar 1 divisor para o numero escolhido até o i chegar ao numero escolhido
+				}
+			}
+			if(numDivisores==2){
+				puts("numero primo");
+			}else{
+				puts("nao e primo");
+			}
 	
 	return 0;
 }
-
-
