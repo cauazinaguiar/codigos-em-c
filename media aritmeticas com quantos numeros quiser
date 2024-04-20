@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <locale.h>
+// usuario escolhe quantos numeros quiser e depois faz a media deles
+int main(void) {
+		float notas,media,soma;
+		int i;
+		i=0;
+		setlocale(LC_ALL, "Portuguese");
+		
+		puts("média dos números");
+		
+		puts("digite quantos notas quiser, digite(0)quando quiser parar");
+		
+
+		do{
+		
+		scanf("%f", &notas);	
+		soma+=notas;
+		i++;
+		}while(notas!=0);
+		i--;
+		media=soma/i;
+		printf("a soma das notas é %.2f", soma);
+		printf(" a média dessas notas é: %.2f", media);
+
+		return 0;
+	}
