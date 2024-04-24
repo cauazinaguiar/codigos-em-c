@@ -5,7 +5,10 @@
 //
 int main(void) {
 	
-float taxa_origem_para_real, taxa_destino_para_real, valor, valor_convertido;
+setlocale(LC_ALL, "Portuguese");
+	
+// Declaração das variáveis
+    float taxa_origem_para_real, taxa_destino_para_real, valor, valor_convertido;
     char moeda_origem, moeda_destino;
 
     // Solicitação das taxas de conversão ao usuário
