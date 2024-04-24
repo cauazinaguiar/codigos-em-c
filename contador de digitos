@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <locale.h>
+//rograma que conte o número de dígitos em um número inteiro
+int main(void) {
+	
+	int i,num,contador;
+	setlocale(LC_ALL, "Portuguese");
+	
+	puts("digite o número para saber quantos digitos tem");
+	scanf("%d", &num);
+	
+	for(;num!=0;num/=10){
+		contador++;
+	}
+		printf("o número digitado tem %d digitos", contador);	
+	return 0;
+	}
