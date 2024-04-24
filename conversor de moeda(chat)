@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <locale.h>
+//
+int main(void) {
+	
+float taxa_origem_para_real, taxa_destino_para_real, valor, valor_convertido;
+    char moeda_origem, moeda_destino;
+
+    // Solicitação das taxas de conversão ao usuário
+    printf("Digite a taxa de conversao da moeda de origem para o Real: ");
+    scanf("%f", &taxa_origem_para_real);
+
+    printf("Digite a taxa de conversao da moeda de destino para o Real: ");
+    scanf("%f", &taxa_destino_para_real);
+
+    // Solicitação dos valores e moedas ao usuário
+    printf("Digite o valor a ser convertido: ");
+    scanf("%f", &valor);
+
+    printf("Digite a moeda de origem (D para dolar, E para euro): ");
+    scanf(" %c", &moeda_origem);
+
+    printf("Digite a moeda de destino (D para dolar, E para euro): ");
+    scanf(" %c", &moeda_destino);
+
+    // Conversão do valor para a moeda de origem para Real
+    valor_convertido = valor * taxa_origem_para_real;
+
+    // Se a moeda de destino for diferente da de origem, fazemos a conversão para a moeda de destino
+    if (moeda_destino != moeda_origem) {
+        valor_convertido /= taxa_destino_para_real;
+    }
+
+    // Impressão do resultado
+    printf("Valor convertido: %.2f\n", valor_convertido);
+
+    return 0;
+}
