@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <locale.h>
+//long long int para calcular numeros muitos grandes
+int main(void) {
+	
+	int i,base,expoente;
+	long long int resultado;
+	resultado=1;
+	setlocale(LC_ALL, "Portuguese");
+	
+	puts("calculador de potência\n");
+	
+	puts("digite a base que quer calcular");
+	scanf("%d", &base);
+	
+	puts("agora digite o expoente da base");
+	scanf("%d", &expoente);
+	
+	for(i=0;i<expoente;i++){
+	resultado*=base;
+	}
+	printf("o resultado da potência de base %d com o expoente %d é:%lld",base,expoente,resultado); //lld de long long int
+	return 0;
+	}
