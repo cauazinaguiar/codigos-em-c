@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <locale.h>
+//
+int main(void) {
+	
+	setlocale(LC_ALL, "Portuguese");
+	
+	int i,QNotas,pesos,SPesos;
+    float notas,media,SNotas;
+    SPesos=0;
+    SNotas=0;
+    puts("média ponderada");
+    puts("digite a quantidade de notas");
+    scanf("%d", &QNotas);
+    
+    for(i=1;i<=QNotas;i++){
+    	printf("\ndigite a nota %d\n", i);
+    	scanf("%f", &notas);
+    printf("agora digite o peso da nota %d\n",i);
+		scanf("%d", &pesos);
+    	 SNotas+=notas*pesos;
+    	 SPesos+=pesos;
+	}
+    media=SNotas/SPesos;
+    printf("soma ponderada é %.2f\n", media);
+    
+    return 0;
+}
