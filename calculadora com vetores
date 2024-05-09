@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include <string.h>
+#include <locale.h>
+#include <stdlib.h>
+
+int main(void) {
+	setlocale(LC_ALL, "Portuguese");
+    int i,num[2],op,
+	soma=0,
+	resul=0;
+	
+	puts("bem vindo ao menu da calculadora de vetores");
+	
+	printf("digite (1) para soma, (2) para subtração, (3) para multiplicação, (4) para divisão e (0) para fechar a calculadora\n");
+	scanf("%d", &op);
+	switch(op){
+		case 1:
+			puts("você escolheu soma\n");
+			puts("escolha 2 vetores para somar\n");
+			
+			for(i=0;i<2;i++){
+			printf("digite o valor %d:\n", i+1);
+			scanf("%d", &num[i]);
+			soma+=num[i];
+			}
+			printf("o resultado da soma é:%d",soma);
+			break;
+			
+		case 2:
+			puts("você escolheu subtração\n");
+			puts("escolha 2 vetores para subtrair\n");
+			
+			for(i=0;i<2;i++){
+			printf("digite o valor %d:\n", i+1);
+			scanf("%d", &num[i]);
+			}
+			resul=num[0]-num[1];
+			printf("o resultado da subtração é:%d",resul);
+			break;
+		case 3:
+			puts("você escolheu multiplicação\n");
+			puts("escolha 2 vetores para multiplicar\n");
+			
+			for(i=0;i<2;i++){
+			printf("digite o valor %d:\n", i+1);
+			scanf("%d", &num[i]);
+			}
+			resul=num[0]*num[1];
+			printf("o resultado da multiplicação é:%d",resul);
+			break;
+		case 4:
+			puts("você escolheu divisão\n");
+			puts("escolha 2 vetores para dividir\n");
+			
+			for(i=0;i<2;i++){
+			printf("digite o valor %d:\n", i+1);
+			scanf("%d", &num[i]);
+			}
+			resul=num[0]/num[1];
+			printf("o resultado da divisão é:%d",resul);
+			break;
+		case 0:
+			puts("calculadora de vetores fechada\n");
+			break;
+		default:
+			puts("opção invalida");
+			break;
+	}
+	return 0;
+}
