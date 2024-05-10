@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <locale.h>
+
+	int main(void){
+		setlocale(LC_ALL,"Portuguese");
+		int n;
+		int matriz[20][20];
+		int i,j;
+		int soma=0;
+		puts("primeiro digite qual a ordem da matriz");
+		scanf("%d", &n);
+		
+		for(i=0;i<n;i++){
+			for(j=0;j<n;j++){
+				
+				printf("digite a matriz[%d][%d]", i+1,j+1);
+				scanf("%d", &matriz[i][j]);
+			}
+		}
+		for(i=0;i<n;i++){
+			soma+=matriz[i][i];
+		}
+	printf("a soma é:%d\n", soma);
+
+    return 0;
+}
