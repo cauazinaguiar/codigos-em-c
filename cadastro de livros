@@ -1,0 +1,57 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <string.h>
+
+
+	typedef struct Livros{
+	char titulo[20];
+	char autor[20];
+	int ano;
+	}Livros;
+	
+int main(void) {
+	setlocale(LC_ALL, "Portuguese");
+	
+
+	int i,QL;
+
+	
+	puts("Cadastro de livros\n");
+	
+	puts("digite quantos livros você quer cadastrar:");
+	scanf("%d", &QL);
+	
+	Livros livro[QL];
+		
+	for(i=0;i<QL;i++){
+	
+	printf("\nDigite o nome do livro %d:\n", i+1);
+	scanf(" %19[^\n]s", livro[i].titulo);
+	fflush(stdin);
+	
+	printf("\nDigite o nome do autor do livro %d:\n", i+1);
+	scanf(" %19[^\n]s", livro[i].autor);
+	fflush(stdin);
+	
+	printf("\nDigite o ano de publicação do livro %d:\n", i+1);
+	scanf("%d", &livro[i].ano);
+	fflush(stdin);
+	
+	}
+	
+	puts("\nPronto, cadastro do livro feito.\n\n Gerando dados do livro...\n\nDados gerados:");
+	
+	system("cls");
+	
+	for(i=0;i<QL;i++){
+		
+	printf("\n Livro %d:\n", i+1);
+	printf("\nTitulo:%s\n", livro[i].titulo); 
+	printf("Autor:%s\n", livro[i].autor);
+	printf("Ano:%d\n", livro[i].ano);
+
+	}
+	return 0;
+}
