@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <string.h>
+
+
+struct Cadastro{
+	char nome[20];
+	int idade;
+	int matricula;
+	float media;
+};
+
+int main(void) {
+	setlocale(LC_ALL, "Portuguese");
+	
+
+	int i,QA;
+
+	
+	puts("Cadastro dos alunos\n");
+	
+	puts("digite quantos alunos você quer cadastrar:");
+	scanf("%d", &QA);
+	
+	struct Cadastro aluno[QA];
+		
+	for(i=0;i<QA;i++){
+	
+	printf("\nDigite o nome do aluno %d:\n", i+1);
+	scanf("%s", aluno[i].nome);
+	fflush(stdin);
+	
+	printf("\nDigite a idade do aluno %d:\n", i+1);
+	scanf("%d", &aluno[i].idade);
+	fflush(stdin);
+	
+	printf("\nDigite a matricula do aluno %d(somente números):\n", i+1);
+	scanf("%d", &aluno[i].matricula);
+	fflush(stdin);
+	
+	printf("\nDigite a média do aluno %d:\n", i+1);
+	scanf("%f", &aluno[i].media);
+	fflush(stdin);
+	}
+	
+	puts("\nPronto, cadastro do aluno feito.\n\n Gerando dados do aluno...\n\nDados gerados:");
+	
+	for(i=0;i<QA;i++){
+	
+	printf("\nAluno %d:%s\n", i+1, aluno[i].nome); 
+	printf("Idade:%d\n", aluno[i].idade);
+	printf("Matricula:%d\n", aluno[i].matricula);
+	printf("Média:%.1f", aluno[i].media);
+	}
+	return 0;
+}
