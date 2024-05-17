@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <string.h>
+#include <time.h>
+
+	void dado(int i){
+	printf("Número do dado sorteado: %d", i);
+}
+int main(void) {
+	setlocale(LC_ALL, "Portuguese");	
+	srand(time(NULL));
+	int NumA = rand() % 6 +1;
+	
+	puts("simulador de dado\n");
+	dado(NumA);
+	
+	
+	return 0;
+}
